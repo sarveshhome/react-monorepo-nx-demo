@@ -1,13 +1,19 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import { Route, Routes } from 'react-router-dom';
 
 import NxWelcome from './nx-welcome';
+import { ProductList } from '@react-monorepo-nx-demo/products';
+import { OrderList } from '@react-monorepo-nx-demo/orders';
+
+
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="react-monorepo-nx-demo" />
-    </div>
+    <Routes>
+      <Route path="/" element={<NxWelcome title={''} />}></Route>
+      <Route path="/products" element={<ProductList />}></Route>
+      <Route path="/orders" element={<OrderList />}></Route>
+    </Routes>
   );
 }
 

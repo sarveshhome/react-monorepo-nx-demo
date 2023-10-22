@@ -1,15 +1,19 @@
-import { render } from '@testing-library/react';
+// App.test.js
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import App from './App'; // Assuming your component file is named App.js
 
-import App from './app';
+test('renders routes correctly', () => {
+  render(
+    <MemoryRouter initialEntries={['/products']}>
+      <App />
+    </MemoryRouter>
+  );
 
-describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
-    expect(baseElement).toBeTruthy();
-  });
+  // Test if the ProductList component is rendered when the route is /products
+  const productListElement = screen.getByText(/ProductList/i);
+  //expect(productListElement).toBeCalled();
 
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-    expect(getByText(/Welcome react-monorepo-nx-demo/gi)).toBeTruthy();
-  });
+  // Similarly, you can write tests for other routes and components
 });
