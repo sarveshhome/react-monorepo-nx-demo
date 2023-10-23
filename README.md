@@ -71,3 +71,12 @@ nx g @nx/react:component OrderList --project=orders
 
 `yarn add react-router-dom@6`
 
+
+## create Libarary 
+
+`nx g @nx/react:library products --directory=libs/products --unitTestRunner=vitest --bundler=none
+nx g @nx/react:library orders --directory=libs/orders --unitTestRunner=vitest --bundler=none
+nx g @nx/react:library shared-ui --directory=libs/shared/ui --unitTestRunner=vitest --bundler=none`
+
+
+nx g @nx/react:library protectedroutes --directory=libs/protectedroutes

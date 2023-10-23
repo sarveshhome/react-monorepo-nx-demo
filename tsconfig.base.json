@@ -17,6 +17,9 @@
     "paths": {
       "@react-monorepo-nx-demo/orders": ["libs/orders/src/index.ts"],
       "@react-monorepo-nx-demo/products": ["libs/products/src/index.ts"],
+      "@react-monorepo-nx-demo/protectedroutes": [
+        "libs/protectedroutes/src/index.ts"
+      ],
       "@react-monorepo-nx-demo/shared-ui": ["libs/shared/ui/src/index.ts"]
     }
   },
