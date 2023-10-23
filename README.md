@@ -66,3 +66,8 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 OrderList
 
 nx g @nx/react:component OrderList --project=orders
+
+# Protected Routes
+
+`yarn add react-router-dom@6`
+
