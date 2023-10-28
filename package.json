@@ -6,7 +6,9 @@
     "start": "nx s react-monorepo-nx-demo",
     "all":"nx run-many --target=serve --all --maxParallel=100 ",
     "all:build":"nx run-many --target=build --all --parallel",
-    "jest":"jest"
+    "jest":"jest",
+    "graph":"nx graph"
+
   },
   "private": true,
   "dependencies": {
